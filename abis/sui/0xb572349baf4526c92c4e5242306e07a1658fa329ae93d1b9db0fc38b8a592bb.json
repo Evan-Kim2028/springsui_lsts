@@ -1,0 +1,330 @@
+[
+	{
+		"fileFormatVersion": 6,
+		"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+		"name": "safe",
+		"friends": [],
+		"structs": {
+			"OwnerCap": {
+				"abilities": {
+					"abilities": [
+						"Key"
+					]
+				},
+				"typeParameters": [],
+				"fields": [
+					{
+						"name": "id",
+						"type": {
+							"Struct": {
+								"address": "0x2",
+								"module": "object",
+								"name": "UID",
+								"typeArguments": []
+							}
+						}
+					}
+				]
+			},
+			"Safe": {
+				"abilities": {
+					"abilities": [
+						"Key"
+					]
+				},
+				"typeParameters": [
+					{
+						"constraints": {
+							"abilities": []
+						},
+						"isPhantom": false
+					}
+				],
+				"fields": [
+					{
+						"name": "id",
+						"type": {
+							"Struct": {
+								"address": "0x2",
+								"module": "object",
+								"name": "UID",
+								"typeArguments": []
+							}
+						}
+					},
+					{
+						"name": "owner_cap_id",
+						"type": {
+							"Struct": {
+								"address": "0x2",
+								"module": "object",
+								"name": "ID",
+								"typeArguments": []
+							}
+						}
+					},
+					{
+						"name": "authorized_object_id",
+						"type": {
+							"Struct": {
+								"address": "0x1",
+								"module": "option",
+								"name": "Option",
+								"typeArguments": [
+									{
+										"Struct": {
+											"address": "0x2",
+											"module": "object",
+											"name": "ID",
+											"typeArguments": []
+										}
+									}
+								]
+							}
+						}
+					},
+					{
+						"name": "obj",
+						"type": {
+							"TypeParameter": 0
+						}
+					}
+				]
+			}
+		},
+		"exposedFunctions": {
+			"assert_authorization": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": []
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Struct": {
+							"address": "0x2",
+							"module": "object",
+							"name": "ID",
+							"typeArguments": []
+						}
+					}
+				],
+				"return": []
+			},
+			"authorize": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": []
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "OwnerCap",
+								"typeArguments": []
+							}
+						}
+					},
+					{
+						"Struct": {
+							"address": "0x2",
+							"module": "object",
+							"name": "ID",
+							"typeArguments": []
+						}
+					}
+				],
+				"return": []
+			},
+			"borrow_obj": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": []
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Reference": {
+							"TypeParameter": 0
+						}
+					}
+				]
+			},
+			"borrow_obj_mut": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": []
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "object",
+								"name": "UID",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"MutableReference": {
+							"TypeParameter": 0
+						}
+					}
+				]
+			},
+			"create": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"TypeParameter": 0
+					},
+					{
+						"Struct": {
+							"address": "0x1",
+							"module": "option",
+							"name": "Option",
+							"typeArguments": [
+								{
+									"Struct": {
+										"address": "0x2",
+										"module": "object",
+										"name": "ID",
+										"typeArguments": []
+									}
+								}
+							]
+						}
+					},
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": []
+			},
+			"revoke_auth": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": []
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "OwnerCap",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": []
+			}
+		}
+	}
+]

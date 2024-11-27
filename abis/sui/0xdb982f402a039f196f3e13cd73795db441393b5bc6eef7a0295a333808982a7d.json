@@ -1,0 +1,1009 @@
+[
+	{
+		"fileFormatVersion": 6,
+		"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+		"name": "linked_set",
+		"friends": [],
+		"structs": {
+			"LinkedSet": {
+				"abilities": {
+					"abilities": [
+						"Store"
+					]
+				},
+				"typeParameters": [
+					{
+						"constraints": {
+							"abilities": [
+								"Copy",
+								"Drop",
+								"Store"
+							]
+						},
+						"isPhantom": false
+					}
+				],
+				"fields": [
+					{
+						"name": "contents",
+						"type": {
+							"Struct": {
+								"address": "0x2",
+								"module": "linked_table",
+								"name": "LinkedTable",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									},
+									{
+										"Struct": {
+											"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+											"module": "linked_set",
+											"name": "Null",
+											"typeArguments": []
+										}
+									}
+								]
+							}
+						}
+					}
+				]
+			},
+			"Null": {
+				"abilities": {
+					"abilities": [
+						"Drop",
+						"Store"
+					]
+				},
+				"typeParameters": [],
+				"fields": [
+					{
+						"name": "dummy_field",
+						"type": "Bool"
+					}
+				]
+			}
+		},
+		"exposedFunctions": {
+			"back": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x1",
+								"module": "option",
+								"name": "Option",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				]
+			},
+			"clone": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			},
+			"contains": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"TypeParameter": 0
+					}
+				],
+				"return": [
+					"Bool"
+				]
+			},
+			"destroy_empty": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				],
+				"return": []
+			},
+			"difference": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			},
+			"drop": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				],
+				"return": []
+			},
+			"empty": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			},
+			"from_vector": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Vector": {
+								"TypeParameter": 0
+							}
+						}
+					},
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			},
+			"front": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x1",
+								"module": "option",
+								"name": "Option",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				]
+			},
+			"intersection": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			},
+			"into_vector": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Vector": {
+							"TypeParameter": 0
+						}
+					}
+				]
+			},
+			"is_empty": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					"Bool"
+				]
+			},
+			"length": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					"U64"
+				]
+			},
+			"next": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"TypeParameter": 0
+					}
+				],
+				"return": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x1",
+								"module": "option",
+								"name": "Option",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				]
+			},
+			"partial_clone": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					"U64",
+					"Bool",
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			},
+			"pop_back": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"TypeParameter": 0
+					}
+				]
+			},
+			"pop_front": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"TypeParameter": 0
+					}
+				]
+			},
+			"prev": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"TypeParameter": 0
+					}
+				],
+				"return": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x1",
+								"module": "option",
+								"name": "Option",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					}
+				]
+			},
+			"push_back": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"TypeParameter": 0
+					}
+				],
+				"return": []
+			},
+			"push_front": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"TypeParameter": 0
+					}
+				],
+				"return": []
+			},
+			"remove": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"TypeParameter": 0
+					}
+				],
+				"return": []
+			},
+			"union": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [
+					{
+						"abilities": [
+							"Copy",
+							"Drop",
+							"Store"
+						]
+					}
+				],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+								"module": "linked_set",
+								"name": "LinkedSet",
+								"typeArguments": [
+									{
+										"TypeParameter": 0
+									}
+								]
+							}
+						}
+					},
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0xdb982f402a039f196f3e13cd73795db441393b5bc6eef7a0295a333808982a7d",
+							"module": "linked_set",
+							"name": "LinkedSet",
+							"typeArguments": [
+								{
+									"TypeParameter": 0
+								}
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+]

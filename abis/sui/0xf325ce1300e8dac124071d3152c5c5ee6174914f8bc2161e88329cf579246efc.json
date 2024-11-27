@@ -1,0 +1,204 @@
+[
+	{
+		"fileFormatVersion": 6,
+		"address": "0xf325ce1300e8dac124071d3152c5c5ee6174914f8bc2161e88329cf579246efc",
+		"name": "afsui",
+		"friends": [],
+		"structs": {
+			"AFSUI": {
+				"abilities": {
+					"abilities": [
+						"Drop"
+					]
+				},
+				"typeParameters": [],
+				"fields": [
+					{
+						"name": "dummy_field",
+						"type": "Bool"
+					}
+				]
+			}
+		},
+		"exposedFunctions": {
+			"burn": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"Struct": {
+											"address": "0x2",
+											"module": "coin",
+											"name": "TreasuryCap",
+											"typeArguments": [
+												{
+													"Struct": {
+														"address": "0xf325ce1300e8dac124071d3152c5c5ee6174914f8bc2161e88329cf579246efc",
+														"module": "afsui",
+														"name": "AFSUI",
+														"typeArguments": []
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "object",
+								"name": "UID",
+								"typeArguments": []
+							}
+						}
+					},
+					{
+						"Struct": {
+							"address": "0x2",
+							"module": "coin",
+							"name": "Coin",
+							"typeArguments": [
+								{
+									"Struct": {
+										"address": "0xf325ce1300e8dac124071d3152c5c5ee6174914f8bc2161e88329cf579246efc",
+										"module": "afsui",
+										"name": "AFSUI",
+										"typeArguments": []
+									}
+								}
+							]
+						}
+					}
+				],
+				"return": [
+					"U64"
+				]
+			},
+			"mint": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [],
+				"parameters": [
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"Struct": {
+											"address": "0x2",
+											"module": "coin",
+											"name": "TreasuryCap",
+											"typeArguments": [
+												{
+													"Struct": {
+														"address": "0xf325ce1300e8dac124071d3152c5c5ee6174914f8bc2161e88329cf579246efc",
+														"module": "afsui",
+														"name": "AFSUI",
+														"typeArguments": []
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					},
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "object",
+								"name": "UID",
+								"typeArguments": []
+							}
+						}
+					},
+					"U64",
+					{
+						"MutableReference": {
+							"Struct": {
+								"address": "0x2",
+								"module": "tx_context",
+								"name": "TxContext",
+								"typeArguments": []
+							}
+						}
+					}
+				],
+				"return": [
+					{
+						"Struct": {
+							"address": "0x2",
+							"module": "coin",
+							"name": "Coin",
+							"typeArguments": [
+								{
+									"Struct": {
+										"address": "0xf325ce1300e8dac124071d3152c5c5ee6174914f8bc2161e88329cf579246efc",
+										"module": "afsui",
+										"name": "AFSUI",
+										"typeArguments": []
+									}
+								}
+							]
+						}
+					}
+				]
+			},
+			"total_supply": {
+				"visibility": "Public",
+				"isEntry": false,
+				"typeParameters": [],
+				"parameters": [
+					{
+						"Reference": {
+							"Struct": {
+								"address": "0xb572349baf4526c92c4e5242306e07a1658fa329ae93d1b9db0fc38b8a592bb",
+								"module": "safe",
+								"name": "Safe",
+								"typeArguments": [
+									{
+										"Struct": {
+											"address": "0x2",
+											"module": "coin",
+											"name": "TreasuryCap",
+											"typeArguments": [
+												{
+													"Struct": {
+														"address": "0xf325ce1300e8dac124071d3152c5c5ee6174914f8bc2161e88329cf579246efc",
+														"module": "afsui",
+														"name": "AFSUI",
+														"typeArguments": []
+													}
+												}
+											]
+										}
+									}
+								]
+							}
+						}
+					}
+				],
+				"return": [
+					"U64"
+				]
+			}
+		}
+	}
+]
