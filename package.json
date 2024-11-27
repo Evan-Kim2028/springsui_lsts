@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "springsui_lsts",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "type": "module",
   "scripts": {
     "codegen": "typemove-sui --target-dir=./src/types/sui ./abis",
