@@ -5,7 +5,7 @@ type StakedEvent = events.StakedEvent;
 type UnstakeRequestedEvent = events.UnstakeRequestedEvent;
 
 const CONTRACT_ADDRESSES = [
-  '0x7f6ce7ade63857c4fd16ef7783fed2dfc4d7fb7e40615abdb653030b76aef0c6',
+  // '0x7f6ce7ade63857c4fd16ef7783fed2dfc4d7fb7e40615abdb653030b76aef0c6', # old afsui vault address
   '0x1575034d2729907aefca1ac757d6ccfcd3fc7e9e77927523c06007d8353ad836',
 ];
 
