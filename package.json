@@ -1,0 +1,27 @@
+{
+  "private": true,
+  "name": "springsui_lsts",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "codegen": "typemove-sui --target-dir=./src/types/sui ./abis",
+    "prebuild": "yarn codegen",
+    "preupload": "yarn codegen",
+    "build": "sentio build",
+    "gen": "sentio gen",
+    "test": "sentio test",
+    "upload": "sentio upload",
+    "postinstall": "sentio gen"
+  },
+  "dependencies": {
+    "@sentio/sdk": "^2.49.1",
+    "@typemove/sui": "^1.7.1"
+  },
+  "devDependencies": {
+    "@sentio/cli": "^2.22.1",
+    "typescript": "^5.5.2",
+    "tsup": "npm:@sentio/tsup@^8.3.5-rc.1",
+    "@types/node": "^20.5.7",
+    "prettier": "^3.0.3"
+  }
+}
