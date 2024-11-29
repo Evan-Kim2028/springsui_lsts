@@ -48,8 +48,8 @@ spring_sui_events
     });
   })
   .onEventRedeemEvent((event: spring_sui_events.RedeemEventInstance, ctx: SuiContext) => {
-    ctx.meter.Counter('mint_events').add(1);
-    ctx.eventLogger.emit('spring_sui_Mint', {
+    ctx.meter.Counter('redeem_events').add(1);
+    ctx.eventLogger.emit('spring_sui_Redeem', {
       typename: event.data_decoded.typename.toString(),
       sui_amount_out: event.data_decoded.sui_amount_out.toString(),
       lst_amount_in: event.data_decoded.lst_amount_in.toString(),
