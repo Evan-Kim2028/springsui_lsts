@@ -1,0 +1,25 @@
+{
+  "spring_sui": {
+    "fileFormatVersion": 6,
+    "address": "0x83556891f4a0f233ce7b05cfe7f957d4020492a34f5405b2cb9377d060bef4bf",
+    "name": "spring_sui",
+    "friends": [],
+    "structs": {
+      "SPRING_SUI": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {}
+  }
+}

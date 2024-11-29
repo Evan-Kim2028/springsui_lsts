@@ -1,0 +1,3309 @@
+{
+  "cell": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "cell",
+    "friends": [],
+    "structs": {
+      "Cell": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": []
+            },
+            "isPhantom": false
+          }
+        ],
+        "fields": [
+          {
+            "name": "element",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "option",
+                "name": "Option",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "destroy": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "cell",
+              "name": "Cell",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ],
+        "return": [
+          {
+            "TypeParameter": 0
+          }
+        ]
+      },
+      "get": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "cell",
+                "name": "Cell",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      },
+      "new": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "TypeParameter": 0
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "cell",
+              "name": "Cell",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "set": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "cell",
+                "name": "Cell",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "TypeParameter": 0
+          }
+        ],
+        "return": [
+          {
+            "TypeParameter": 0
+          }
+        ]
+      }
+    }
+  },
+  "events": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "events",
+    "friends": [
+      {
+        "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+        "name": "liquid_staking"
+      }
+    ],
+    "structs": {
+      "Event": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": [
+                "Copy",
+                "Drop"
+              ]
+            },
+            "isPhantom": false
+          }
+        ],
+        "fields": [
+          {
+            "name": "event",
+            "type": {
+              "TypeParameter": 0
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "emit_event": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Copy",
+              "Drop"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "TypeParameter": 0
+          }
+        ],
+        "return": []
+      }
+    }
+  },
+  "fees": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "fees",
+    "friends": [
+      {
+        "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+        "name": "liquid_staking"
+      }
+    ],
+    "structs": {
+      "FeeConfig": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "sui_mint_fee_bps",
+            "type": "U64"
+          },
+          {
+            "name": "staked_sui_mint_fee_bps",
+            "type": "U64"
+          },
+          {
+            "name": "redeem_fee_bps",
+            "type": "U64"
+          },
+          {
+            "name": "staked_sui_redeem_fee_bps",
+            "type": "U64"
+          },
+          {
+            "name": "spread_fee_bps",
+            "type": "U64"
+          },
+          {
+            "name": "custom_redeem_fee_bps",
+            "type": "U64"
+          },
+          {
+            "name": "extra_fields",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "bag",
+                "name": "Bag",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "FeeConfigBuilder": {
+        "abilities": {
+          "abilities": []
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "fields",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "bag",
+                "name": "Bag",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "calculate_mint_fee": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "calculate_redeem_fee": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "custom_redeem_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "destroy": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfig",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      },
+      "new_builder": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "redeem_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "set_custom_redeem_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "set_redeem_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "set_spread_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "set_staked_sui_mint_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "set_staked_sui_redeem_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "set_sui_mint_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "spread_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "staked_sui_mint_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "staked_sui_redeem_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "sui_mint_fee_bps": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "to_fee_config": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfigBuilder",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfig",
+              "typeArguments": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "liquid_staking": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "liquid_staking",
+    "friends": [],
+    "structs": {
+      "AdminCap": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": []
+            },
+            "isPhantom": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "CollectFeesEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "amount",
+            "type": "U64"
+          }
+        ]
+      },
+      "CreateEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "liquid_staking_info_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "DecreaseValidatorStakeEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "staking_pool_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "amount",
+            "type": "U64"
+          }
+        ]
+      },
+      "EpochChangedEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "old_sui_supply",
+            "type": "U64"
+          },
+          {
+            "name": "new_sui_supply",
+            "type": "U64"
+          },
+          {
+            "name": "lst_supply",
+            "type": "U64"
+          },
+          {
+            "name": "spread_fee",
+            "type": "U64"
+          }
+        ]
+      },
+      "IncreaseValidatorStakeEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "staking_pool_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "amount",
+            "type": "U64"
+          }
+        ]
+      },
+      "LIQUID_STAKING": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      },
+      "LiquidStakingInfo": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": []
+            },
+            "isPhantom": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "lst_treasury_cap",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "coin",
+                "name": "TreasuryCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "fee_config",
+            "type": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "cell",
+                "name": "Cell",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                      "module": "fees",
+                      "name": "FeeConfig",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "fees",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "balance",
+                "name": "Balance",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "sui",
+                      "name": "SUI",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "accrued_spread_fees",
+            "type": "U64"
+          },
+          {
+            "name": "storage",
+            "type": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "version",
+            "type": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "extra_fields",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "bag",
+                "name": "Bag",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "MintEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "sui_amount_in",
+            "type": "U64"
+          },
+          {
+            "name": "lst_amount_out",
+            "type": "U64"
+          },
+          {
+            "name": "fee_amount",
+            "type": "U64"
+          }
+        ]
+      },
+      "RedeemEvent": {
+        "abilities": {
+          "abilities": [
+            "Copy",
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "typename",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "type_name",
+                "name": "TypeName",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "lst_amount_in",
+            "type": "U64"
+          },
+          {
+            "name": "sui_amount_out",
+            "type": "U64"
+          },
+          {
+            "name": "fee_amount",
+            "type": "U64"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "change_validator_priority": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "AdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "collect_fees": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "AdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "create_lst": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Drop"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfig",
+              "typeArguments": []
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "TreasuryCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "liquid_staking",
+              "name": "AdminCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "liquid_staking",
+              "name": "LiquidStakingInfo",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "create_lst_with_stake": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Drop"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfig",
+              "typeArguments": []
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "TreasuryCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "Vector": {
+              "Struct": {
+                "address": "0x3",
+                "module": "staking_pool",
+                "name": "FungibleStakedSui",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "liquid_staking",
+              "name": "AdminCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "liquid_staking",
+              "name": "LiquidStakingInfo",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "decrease_validator_stake": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "AdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "fee_config": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "fees",
+                "name": "FeeConfig",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "fees": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "increase_validator_stake": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "AdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "mint": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Drop"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "redeem": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": [
+              "Drop"
+            ]
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "refresh": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "storage": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "total_lst_supply": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "total_sui_supply": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "update_fees": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "AdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "fees",
+              "name": "FeeConfig",
+              "typeArguments": []
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  },
+  "storage": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "storage",
+    "friends": [
+      {
+        "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+        "name": "liquid_staking"
+      },
+      {
+        "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+        "name": "weight"
+      }
+    ],
+    "structs": {
+      "Storage": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "sui_pool",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "balance",
+                "name": "Balance",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "sui",
+                      "name": "SUI",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "validator_infos",
+            "type": {
+              "Vector": {
+                "Struct": {
+                  "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                  "module": "storage",
+                  "name": "ValidatorInfo",
+                  "typeArguments": []
+                }
+              }
+            }
+          },
+          {
+            "name": "total_sui_supply",
+            "type": "U64"
+          },
+          {
+            "name": "last_refresh_epoch",
+            "type": "U64"
+          },
+          {
+            "name": "extra_fields",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "bag",
+                "name": "Bag",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "ValidatorInfo": {
+        "abilities": {
+          "abilities": [
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "staking_pool_id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "ID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "validator_address",
+            "type": "Address"
+          },
+          {
+            "name": "active_stake",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "option",
+                "name": "Option",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x3",
+                      "module": "staking_pool",
+                      "name": "FungibleStakedSui",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "inactive_stake",
+            "type": {
+              "Struct": {
+                "address": "0x1",
+                "module": "option",
+                "name": "Option",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x3",
+                      "module": "staking_pool",
+                      "name": "StakedSui",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "exchange_rate",
+            "type": {
+              "Struct": {
+                "address": "0x3",
+                "module": "staking_pool",
+                "name": "PoolTokenExchangeRate",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "total_sui_amount",
+            "type": "U64"
+          },
+          {
+            "name": "extra_fields",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "bag",
+                "name": "Bag",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "active_stake": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "ValidatorInfo",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x1",
+                "module": "option",
+                "name": "Option",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x3",
+                      "module": "staking_pool",
+                      "name": "FungibleStakedSui",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "change_validator_priority": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64"
+        ],
+        "return": []
+      },
+      "exchange_rate": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "ValidatorInfo",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "staking_pool",
+                "name": "PoolTokenExchangeRate",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "find_validator_index_by_address": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          "Address"
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "inactive_stake": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "ValidatorInfo",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x1",
+                "module": "option",
+                "name": "Option",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x3",
+                      "module": "staking_pool",
+                      "name": "StakedSui",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "join_fungible_stake": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x3",
+              "module": "staking_pool",
+              "name": "FungibleStakedSui",
+              "typeArguments": []
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "join_stake": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x3",
+              "module": "staking_pool",
+              "name": "StakedSui",
+              "typeArguments": []
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "join_to_sui_pool": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "return": []
+      },
+      "last_refresh_epoch": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "new": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "storage",
+              "name": "Storage",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "refresh": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Bool"
+        ]
+      },
+      "split_n_sui": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "split_up_to_n_sui_from_sui_pool": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "balance",
+              "name": "Balance",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x2",
+                    "module": "sui",
+                    "name": "SUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "staking_pool_id": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "ValidatorInfo",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "object",
+              "name": "ID",
+              "typeArguments": []
+            }
+          }
+        ]
+      },
+      "sui_pool": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "balance",
+                "name": "Balance",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x2",
+                      "module": "sui",
+                      "name": "SUI",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "total_sui_amount": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "ValidatorInfo",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "total_sui_supply": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "unstake_approx_n_sui_from_active_stake": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "unstake_approx_n_sui_from_inactive_stake": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "unstake_approx_n_sui_from_validator": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          "U64",
+          "U64",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "U64"
+        ]
+      },
+      "validator_address": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "ValidatorInfo",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          "Address"
+        ]
+      },
+      "validators": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "storage",
+                "name": "Storage",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Reference": {
+              "Vector": {
+                "Struct": {
+                  "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                  "module": "storage",
+                  "name": "ValidatorInfo",
+                  "typeArguments": []
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  },
+  "version": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "version",
+    "friends": [
+      {
+        "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+        "name": "liquid_staking"
+      },
+      {
+        "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+        "name": "weight"
+      }
+    ],
+    "structs": {
+      "Version": {
+        "abilities": {
+          "abilities": [
+            "Drop",
+            "Store"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "pos0",
+            "type": "U16"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "assert_version": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          "U16"
+        ],
+        "return": []
+      },
+      "assert_version_and_upgrade": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          "U16"
+        ],
+        "return": []
+      },
+      "migrate_": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          "U16"
+        ],
+        "return": []
+      },
+      "new": {
+        "visibility": "Friend",
+        "isEntry": false,
+        "typeParameters": [],
+        "parameters": [
+          "U16"
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "version",
+              "name": "Version",
+              "typeArguments": []
+            }
+          }
+        ]
+      }
+    }
+  },
+  "weight": {
+    "fileFormatVersion": 6,
+    "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+    "name": "weight",
+    "friends": [],
+    "structs": {
+      "WEIGHT": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      },
+      "WeightHook": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": []
+            },
+            "isPhantom": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "validator_addresses_and_weights",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "vec_map",
+                "name": "VecMap",
+                "typeArguments": [
+                  "Address",
+                  "U64"
+                ]
+              }
+            }
+          },
+          {
+            "name": "total_weight",
+            "type": "U64"
+          },
+          {
+            "name": "admin_cap",
+            "type": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "AdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "name": "version",
+            "type": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "version",
+                "name": "Version",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "name": "extra_fields",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "bag",
+                "name": "Bag",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      },
+      "WeightHookAdminCap": {
+        "abilities": {
+          "abilities": [
+            "Store",
+            "Key"
+          ]
+        },
+        "typeParameters": [
+          {
+            "constraints": {
+              "abilities": []
+            },
+            "isPhantom": true
+          }
+        ],
+        "fields": [
+          {
+            "name": "id",
+            "type": {
+              "Struct": {
+                "address": "0x2",
+                "module": "object",
+                "name": "UID",
+                "typeArguments": []
+              }
+            }
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "eject": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "weight",
+              "name": "WeightHook",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "weight",
+              "name": "WeightHookAdminCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "liquid_staking",
+              "name": "AdminCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "new": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "liquid_staking",
+              "name": "AdminCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": [
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "weight",
+              "name": "WeightHook",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          },
+          {
+            "Struct": {
+              "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+              "module": "weight",
+              "name": "WeightHookAdminCap",
+              "typeArguments": [
+                {
+                  "TypeParameter": 0
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "rebalance": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "weight",
+                "name": "WeightHook",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x3",
+                "module": "sui_system",
+                "name": "SuiSystemState",
+                "typeArguments": []
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "liquid_staking",
+                "name": "LiquidStakingInfo",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "set_validator_addresses_and_weights": {
+        "visibility": "Public",
+        "isEntry": false,
+        "typeParameters": [
+          {
+            "abilities": []
+          }
+        ],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "weight",
+                "name": "WeightHook",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Reference": {
+              "Struct": {
+                "address": "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7",
+                "module": "weight",
+                "name": "WeightHookAdminCap",
+                "typeArguments": [
+                  {
+                    "TypeParameter": 0
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "vec_map",
+              "name": "VecMap",
+              "typeArguments": [
+                "Address",
+                "U64"
+              ]
+            }
+          }
+        ],
+        "return": []
+      }
+    }
+  }
+}
