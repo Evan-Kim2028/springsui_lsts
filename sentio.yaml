@@ -1,10 +1,16 @@
 project: springsui_lsts
 contracts:
   - chain: sui_mainnet
-    address: "0x7f6ce7ade63857c4fd16ef7783fed2dfc4d7fb7e40615abdb653030b76aef0c6"
+    address: "0x7f6ce7ade63857c4fd16ef7783fed2dfc4d7fb7e40615abdb653030b76aef0c6" # aftermath
   - chain: sui_mainnet
-    address: "0x1575034d2729907aefca1ac757d6ccfcd3fc7e9e77927523c06007d8353ad836"
+    address: "0x1575034d2729907aefca1ac757d6ccfcd3fc7e9e77927523c06007d8353ad836" # aftermath
   - chain: sui_mainnet
-    address: "0x83556891f4a0f233ce7b05cfe7f957d4020492a34f5405b2cb9377d060bef4bf"
+    address: "0x83556891f4a0f233ce7b05cfe7f957d4020492a34f5405b2cb9377d060bef4bf" # spring sui
   - chain: sui_mainnet
-    address: "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7"
+    address: "0xb0575765166030556a6eafd3b1b970eba8183ff748860680245b9edd41c716e7" # spring sui
+  - chain: sui_mainnet
+    address: "0xbde4ba4c2e274a60ce15c1cfff9e5c42e41654ac8b6d906a57efa4bd3c29f47d" # haedal
+  - chain: sui_mainnet
+    address: "0x549e8b69270defbfafd4f94e17ec44cdbdd99820b33bda2278dea3b9a32d3f55" # volo
+  - chain: sui_mainnet
+    address: "0x1d56b8ec33c3fae897eb7bb1acb79914e8152faed614868928e684c25c8b198d" # haedal 1
