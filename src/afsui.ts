@@ -6,7 +6,7 @@ import { _0x1 } from '@typemove/sui/builtin';
 export function initAfsuiProcessor() {
     afsui_events.bind()
         .onEventStakedEvent((event: afsui_events.StakedEventInstance, ctx: SuiContext) => {
-            ctx.meter.Counter('staked_events').add(1);
+            ctx.meter.Counter('afsui_staked_events').add(1);
             ctx.eventLogger.emit('afsui_StakedEvent', {
                 distinctId: event.data_decoded.staker,
                 staker: event.data_decoded.staker,
@@ -23,7 +23,7 @@ export function initAfsuiProcessor() {
             });
         })
         .onEventUnstakeRequestedEvent((event: afsui_events.UnstakeRequestedEventInstance, ctx: SuiContext) => {
-            ctx.meter.Counter('unstake_requested_events').add(1);
+            ctx.meter.Counter('afsui_unstake_requested_events').add(1);
             ctx.eventLogger.emit('afsui_UnstakeRequestedEvent', {
                 afsui_id: event.data_decoded.afsui_id,
                 provided_afsui_amount: event.data_decoded.provided_afsui_amount.toString(),

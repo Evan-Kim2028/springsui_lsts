@@ -12,7 +12,8 @@ export function initSsuiProcessor() {
             const type = event.type
             if (type == SSUI_MINT_EVENT_TYPE) {
                 const mintEvent = event.data_decoded.event as liquid_staking.MintEvent
-                ctx.eventLogger.emit("stake", {
+                ctx.meter.Counter('ssui_staked_events').add(1);
+                ctx.eventLogger.emit("ssui_StakedEvent", {
                     project: "ssui_lst",
                     mintEvent
                 })
@@ -20,7 +21,8 @@ export function initSsuiProcessor() {
 
             if (type == SSUI_REDEEM_EVENT_TYPE) {
                 const redeemEvent = event.data_decoded.event as liquid_staking.RedeemEvent
-                ctx.eventLogger.emit("unstake", {
+                ctx.meter.Counter('ssui_unstake_requested_events').add(1);
+                ctx.eventLogger.emit("ssui_UnstakeRequestedEvent", {
                     project: "ssui_lst",
                     redeemEvent
                 })
