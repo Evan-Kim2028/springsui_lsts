@@ -18,7 +18,7 @@ export function initHaSuiProcessor() {
             ctx.meter.Counter('hasui_system_unstaked_event').add(1);
             ctx.eventLogger.emit('hasui_SystemUnstakedEvent', {
                 owner: event.data_decoded.owner,
-                epoch: event.data_decoded.epoch.toString(),
+                epoch: event.data_decoded.epoch,
                 epoch_timestamp_ms: event.data_decoded.epoch_timestamp_ms.toString(),
                 sui_amount: event.data_decoded.sui_amount.toString(),
                 st_amount: event.data_decoded.st_amount.toString()
