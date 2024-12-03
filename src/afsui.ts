@@ -18,7 +18,7 @@ export function initAfsuiProcessor() {
                 afsui_amount: event.data_decoded.afsui_amount.toString(),
                 validator_fee: event.data_decoded.validator_fee.toString(),
                 referrer: event.data_decoded.referrer,
-                epoch: event.data_decoded.epoch.toString(),
+                epoch: event.data_decoded.epoch,
                 is_restaked: event.data_decoded.is_restaked,
             });
         })
