@@ -28,7 +28,7 @@ export function initAfsuiProcessor() {
                 afsui_id: event.data_decoded.afsui_id,
                 provided_afsui_amount: event.data_decoded.provided_afsui_amount.toString(),
                 requester: event.data_decoded.requester,
-                epoch: event.data_decoded.epoch.toString(),
+                epoch: event.data_decoded.epoch,
             });
         });
 }
