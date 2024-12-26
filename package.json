@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "springsui_lsts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "type": "module",
   "scripts": {
     "codegen": "typemove-sui --target-dir=./src/types/sui ./abis",
@@ -14,11 +14,11 @@
     "postinstall": "sentio gen"
   },
   "dependencies": {
-    "@sentio/sdk": "^2.49.1",
+    "@sentio/sdk": "^2.53.2",
     "@typemove/sui": "^1.7.1"
   },
   "devDependencies": {
-    "@sentio/cli": "^2.22.1",
+    "@sentio/cli": "^2.23.3",
     "@types/node": "^20.5.7",
     "prettier": "^3.0.3",
     "tsup": "npm:@sentio/tsup@^8.3.5-rc.1",

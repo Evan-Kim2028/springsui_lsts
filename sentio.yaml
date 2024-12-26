@@ -14,3 +14,5 @@ contracts:
     address: "0x549e8b69270defbfafd4f94e17ec44cdbdd99820b33bda2278dea3b9a32d3f55" # volo
   - chain: sui_mainnet
     address: "0x1d56b8ec33c3fae897eb7bb1acb79914e8152faed614868928e684c25c8b198d" # haedal 1
+  - chain: sui_mainnet
+    address: "0x059f94b85c07eb74d2847f8255d8cc0a67c9a8dcc039eabf9f8b9e23a0de2700" # alphahi stsui
