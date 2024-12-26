@@ -1,0 +1,135 @@
+{
+  "stsui": {
+    "fileFormatVersion": 6,
+    "address": "0x22000a5c0d6d2375b7ea4e51df4a54f793693d7ec868e72153d3088595ff9701",
+    "name": "stsui",
+    "friends": [],
+    "structs": {
+      "STSUI": {
+        "abilities": {
+          "abilities": [
+            "Drop"
+          ]
+        },
+        "typeParameters": [],
+        "fields": [
+          {
+            "name": "dummy_field",
+            "type": "Bool"
+          }
+        ]
+      }
+    },
+    "exposedFunctions": {
+      "burn": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "coin",
+                "name": "TreasuryCap",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x22000a5c0d6d2375b7ea4e51df4a54f793693d7ec868e72153d3088595ff9701",
+                      "module": "stsui",
+                      "name": "STSUI",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "Coin",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x22000a5c0d6d2375b7ea4e51df4a54f793693d7ec868e72153d3088595ff9701",
+                    "module": "stsui",
+                    "name": "STSUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          }
+        ],
+        "return": []
+      },
+      "mint": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "coin",
+                "name": "TreasuryCap",
+                "typeArguments": [
+                  {
+                    "Struct": {
+                      "address": "0x22000a5c0d6d2375b7ea4e51df4a54f793693d7ec868e72153d3088595ff9701",
+                      "module": "stsui",
+                      "name": "STSUI",
+                      "typeArguments": []
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "U64",
+          "Address",
+          {
+            "MutableReference": {
+              "Struct": {
+                "address": "0x2",
+                "module": "tx_context",
+                "name": "TxContext",
+                "typeArguments": []
+              }
+            }
+          }
+        ],
+        "return": []
+      },
+      "transfer_ownership": {
+        "visibility": "Public",
+        "isEntry": true,
+        "typeParameters": [],
+        "parameters": [
+          {
+            "Struct": {
+              "address": "0x2",
+              "module": "coin",
+              "name": "TreasuryCap",
+              "typeArguments": [
+                {
+                  "Struct": {
+                    "address": "0x22000a5c0d6d2375b7ea4e51df4a54f793693d7ec868e72153d3088595ff9701",
+                    "module": "stsui",
+                    "name": "STSUI",
+                    "typeArguments": []
+                  }
+                }
+              ]
+            }
+          },
+          "Address"
+        ],
+        "return": []
+      }
+    }
+  }
+}

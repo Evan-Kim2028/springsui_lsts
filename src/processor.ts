@@ -3,7 +3,7 @@ import { initSsuiProcessor } from './ssui.js';
 import { initHaSuiProcessor } from './hasui.js';
 import { initVSuiProcessor } from './vsui.js'
 import { initValidatorProcessor } from './validator_set.js';
-
+import { initStSuiProcessor } from './stsui.js';
 /**
  * Main processor initialization.
  */
@@ -13,6 +13,7 @@ export function main() {
   initHaSuiProcessor();
   initVSuiProcessor();
   initValidatorProcessor();
+  initStSuiProcessor();
 }
 
 main();
